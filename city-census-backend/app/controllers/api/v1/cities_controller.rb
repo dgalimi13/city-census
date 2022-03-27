@@ -11,14 +11,17 @@ class Api::V1::CitiesController < ApplicationController
                 render json: @city 
             else 
                 render json: {error: 'Error creating city'}
+            end 
         end 
     
         def show
-    
+            @city = City.find(params[:id])
+            render json: @city
         end 
     
         def destroy
-    
+            city = City.find(params[:id])
+            @city.destroy
         end 
     
         private
