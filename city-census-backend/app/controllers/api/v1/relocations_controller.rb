@@ -8,8 +8,9 @@ class Api::V1::RelocationsController < ApplicationController
         end 
     
         def create
-            @relocation = Relocation.new(relocation_params)
-            if @relocation.save 
+            @relocation = @city.relocations.new(relocation_params)
+            if @city.update_population(@relocation) != 'Error creating city'
+                @transaction.save
                 render json: @relocation 
             else 
                 render json: {error: 'Error creating relocation'}
