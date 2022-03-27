@@ -3,7 +3,7 @@ class CreateRelocations < ActiveRecord::Migration[6.1]
     create_table :relocations do |t|
       t.integer :city_id
       t.integer :amount
-      t.string :type
+      t.string :kind
       t.datetime :date
       t.string :reason
 

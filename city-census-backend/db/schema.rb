@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2022_03_27_155143) do
   create_table "relocations", force: :cascade do |t|
     t.integer "city_id"
     t.integer "amount"
-    t.string "type"
+    t.string "kind"
     t.datetime "date"
     t.string "reason"
     t.datetime "created_at", precision: 6, null: false
