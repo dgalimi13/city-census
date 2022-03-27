@@ -1,7 +1,9 @@
 class Api::V1::RelocationsController < ApplicationController
 
+    before_action :set_city
+
         def index 
-            @relocations = Relocation.all 
+            @relocations = @city.relocations
             render json: @relocations
         end 
     
@@ -25,6 +27,10 @@ class Api::V1::RelocationsController < ApplicationController
         end 
     
         private
+
+        def set_city
+            @city = City.find(params[:city_id])
+        end 
     
         def relocation_params(params)
             params.require(:relocation).permit(:amount, :city_id, :kind, :date, :reason)
