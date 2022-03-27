@@ -1,2 +1,2 @@
-class CitiesController < ApplicationController
+class Api::V1::CitiesController < ApplicationController
 end
