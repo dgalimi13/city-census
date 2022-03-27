@@ -6,7 +6,11 @@ class Api::V1::CitiesController < ApplicationController
         end 
     
         def create
-    
+            @city = City.new(city_params)
+            if @city.save 
+                render json: @city 
+            else 
+                render json: {error: 'Error creating city'}
         end 
     
         def show
