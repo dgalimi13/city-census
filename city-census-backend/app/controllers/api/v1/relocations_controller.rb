@@ -36,7 +36,5 @@ class Api::V1::RelocationsController < ApplicationController
         def relocation_params(params)
             params.require(:relocation).permit(:amount, :city_id, :kind, :date, :reason)
         end 
-        
-    end
 
 end

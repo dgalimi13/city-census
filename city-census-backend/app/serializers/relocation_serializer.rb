@@ -1,3 +1,3 @@
 class RelocationSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :amount, :kind, :date, :reason, :city_id
 end

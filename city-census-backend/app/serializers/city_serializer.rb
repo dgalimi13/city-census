@@ -1,3 +1,4 @@
 class CitySerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :population
+  has_many :relocations
 end
