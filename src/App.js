@@ -5,7 +5,7 @@ import {fetchCities} from './actions/fetchCities'
 class App extends React.Component {
 
   componentDidMount() { 
-    // this.props.fetchCities()
+    this.props.fetchCities({type: 'FETCH_CITIES', payload: {name: 'New York City'}})
     }
 
   render() { 
