@@ -1,7 +1,7 @@
 class Api::V1::CitiesController < ApplicationController
 
         def index 
-            @citys = City.all 
+            @cities = City.all 
             render json: @cities
         end 
     
@@ -29,7 +29,5 @@ class Api::V1::CitiesController < ApplicationController
         def city_params(params)
             params.require(:city).permit(:name, :population)
         end 
-        
-    end
     
 end

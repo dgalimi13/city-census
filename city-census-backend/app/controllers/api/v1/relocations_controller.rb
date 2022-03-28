@@ -9,11 +9,11 @@ class Api::V1::RelocationsController < ApplicationController
     
         def create
             @relocation = @city.relocations.new(relocation_params)
-            if @city.update_population(@relocation) != 'Error creating city'
+            if @city.update_population(@relocation) != 'Population cannot be less than 0'
                 @transaction.save
                 render json: @relocation 
             else 
-                render json: {error: 'Error creating relocation'}
+                render json: {error: 'Population cannot be less than 0'}
             end 
         end 
     
