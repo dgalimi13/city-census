@@ -1,17 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import {fetchCities} from './actions/fetchCities'
 
 class App extends React.Component {
 
   componentDidMount() { 
-    fetch('http://127.0.0.1:3000/api/v1/cities', {
-      method: 'GET'
-    })
-    .then(resp => resp.json())
-    .then(data => console.log(data))
+    // this.props.fetchCities()
     }
 
-  render() {
+  render() { 
     return (
       <div className="App">
         App
@@ -20,11 +17,10 @@ class App extends React.Component {
   } 
 }
 
-const mapStatetoProps = (state) => {
-return {
-  cities: state.cities
-}
+// const mapStatetoProps = (state) => {
+//   return {
+//     cities: state.cities
+//   }
+// } 
 
-} 
-
-export default connect(mapStatetoProps, {fetchCities})(App);
+export default connect(null, {fetchCities})(App);
