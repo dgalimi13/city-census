@@ -3,7 +3,7 @@ import React from 'react';
 class App extends React.Component {
 
   componentDidMount() {
-    fetch('http://127.0.0.1:3000/api/v1/cities/1', {
+    fetch('http://127.0.0.1:3000/api/v1/cities/1/relocations', {
       method: 'GET'
     })
     .then(response => response.json())
