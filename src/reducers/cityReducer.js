@@ -1,8 +1,6 @@
 
-export default function cityReducer(state = {cities: []} ) {
+export default function cityReducer(state = {cities: []}, action) {
 
-
+return state
 
 }
-
-dispatchEvent(actionObje)
