@@ -16,7 +16,7 @@ class CitiesContainer extends React.Component {
         return (
             <div>
                 <CityInput/>
-                <Cities/>
+                <Cities cities={this.props.cities}/>
             </div>
         )
     }
