@@ -28,4 +28,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(CitiesContainer)
+export default connect(mapStateToProps, {fetchCities})(CitiesContainer)
