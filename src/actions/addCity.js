@@ -9,7 +9,7 @@ export const addCity = (data) => {
             method: 'POST',
             body: JSON.stringify(data)
         })
-
-  
+        .then(response => response.json())
+        .then(city => dispatch({type: 'ADD_CITY', payload: city}))
     }
 }
