@@ -9,7 +9,8 @@ class CitiesContainer extends React.Component {
     render () {
         return (
             <div>
-                CitiesContainer
+                <CityInput/>
+                <Cities/>
             </div>
         )
     }
