@@ -9,7 +9,7 @@ import CityInput from '../components/CityInput'
 class CitiesContainer extends React.Component {
 
     componentDidMount() {
-        // this.props.fetchCities()
+        this.props.fetchCities()
     }
 
     render () {
