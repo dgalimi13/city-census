@@ -15,7 +15,7 @@ class CitiesContainer extends React.Component {
     render () {
         return (
             <div>
-                <CityInput/>
+                <CityInput/><br/><br/>
                 <Cities cities={this.props.cities}/>
             </div>
         )
