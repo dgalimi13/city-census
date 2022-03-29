@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchCities} from './actions/fetchCities'
+import CitiesContainer from './containers/CitiesContainer'
+
 
 class App extends React.Component {
 

@@ -1,6 +1,6 @@
 
 
-export function fetchCities()) {
+export function fetchCities() {
 
 
 
