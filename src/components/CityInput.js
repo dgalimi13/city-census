@@ -11,6 +11,7 @@ class CityInput extends React.Component {
             </div>
 
         )
-
     }
 }
+
+export default CityInput
