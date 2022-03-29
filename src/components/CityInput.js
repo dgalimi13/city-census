@@ -1,10 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addCity} from './actions/addCity'
+import {addCity} from '../actions/addCity'
 
 class CityInput extends React.Component {
 
-state = {name: '', population: ''}
+state = {
+    name: '', 
+    population: ''
+}
 
 handleChange = (event) => {
     this.setState({
@@ -13,8 +16,8 @@ handleChange = (event) => {
 }
 
 handleSubmit = (event) => {
-    event.preventDefualt()
-    this.props.addCity
+    event.preventDefault()
+    this.props.addCity(this.state)
 }
 
     render () {
