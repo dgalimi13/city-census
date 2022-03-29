@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 class CityInput extends React.Component {
 
@@ -10,14 +11,19 @@ handleChange = (event) => {
     })
 }
 
+handleSubmit = () => {
+
+}
+
     render () {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>City Name: </label>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
                     <label>City Population: </label>
-                    <input type='text' placeholder='Population' value={this.state.population} name="population" onChange={this.handleChange}/>
+                    <input type='text' placeholder='Population' value={this.state.population} name="population" onChange={this.handleChange}/><br/>
+                    <input type="submit"/>
                 </form>
             </div>
 
@@ -25,4 +31,4 @@ handleChange = (event) => {
     }
 }
 
-export default CityInput
+export default connect(null, {addCity})(CityInput)
