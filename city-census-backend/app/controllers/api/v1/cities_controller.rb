@@ -26,7 +26,7 @@ class Api::V1::CitiesController < ApplicationController
     
         private
     
-        def city_params(params)
+        def city_params
             params.require(:city).permit(:name, :population)
         end 
     
