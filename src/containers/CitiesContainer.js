@@ -4,7 +4,6 @@ import Cities from '../components/Cities'
 import CityInput from '../components/CityInput'
 
 
-
 class CitiesContainer extends React.Component {
 
     render () {
@@ -15,7 +14,11 @@ class CitiesContainer extends React.Component {
             </div>
         )
     }
-
 }
 
-export default connect()(CitiesContainer)
+const mapStatetoProps = state => {
+    return {
+        cities: state.cities
+}
+
+export default connect(mapStatetoProps)(CitiesContainer)
