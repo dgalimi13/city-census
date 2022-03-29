@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import Cities from '../components/Cities'
 import CityInput from '../components/CityInput'
 
@@ -17,4 +18,4 @@ class CitiesContainer extends React.Component {
 
 }
 
-export default CitiesContainer
+export default connect()(CitiesContainer)
