@@ -5,7 +5,7 @@ const Cities = (props) => {
 
     return (
         <div>
-            Cities
+            {props.cities.map(city => <li key={city.id}>{city.name} - {city.population}</li> )}
         </div>
 
     )
