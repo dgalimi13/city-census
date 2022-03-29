@@ -1,10 +1,16 @@
 import React from 'react'
 import {connect} from 'react-redux'
+
+import {fetchCities} from "../actions/fetchCities"
 import Cities from '../components/Cities'
 import CityInput from '../components/CityInput'
 
 
 class CitiesContainer extends React.Component {
+
+    componentDidMount() {
+        this.props.fetchCities()
+    }
 
     render () {
         return (
@@ -16,9 +22,10 @@ class CitiesContainer extends React.Component {
     }
 }
 
-const mapStatetoProps = state => {
+const mapStateToProps = state => {
     return {
         cities: state.cities
+    }
 }
 
-export default connect(mapStatetoProps)(CitiesContainer)
+export default connect(mapStateToProps)(CitiesContainer)
