@@ -19,9 +19,9 @@ class CitiesContainer extends React.Component {
                 
                 <Routes>
                 <Route path='/cities/new' element={<CityInput />}></Route>
+                <Route path='/cities' element={<Cities cities={this.props.cities} />}>          </Route>
                 </Routes>
-                <CityInput/><br/><br/>
-                <Cities cities={this.props.cities}/>
+                
 
                 
             </div>
