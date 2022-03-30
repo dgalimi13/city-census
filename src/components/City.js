@@ -11,7 +11,6 @@ console.log(props)
     </li>
 )
 
-
 }
 
 export default City
