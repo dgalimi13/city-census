@@ -1,9 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
+import {Route} from 'react-router-dom'
 import {fetchCities} from "../actions/fetchCities"
 import Cities from '../components/Cities'
 import CityInput from '../components/CityInput'
+import cityReducer from '../reducers/cityReducer'
 
 
 class CitiesContainer extends React.Component {
@@ -15,6 +16,7 @@ class CitiesContainer extends React.Component {
     render () {
         return (
             <div>
+                <Route path='/cities/new' component={cityReducer.input/>
                 <CityInput/><br/><br/>
                 <Cities cities={this.props.cities}/>
             </div>
