@@ -7,7 +7,8 @@ console.log(props)
     return (
 
     <li>
-        {props.city.name} - {props.city.population}
+        
+        {/* {props.city.name} - {props.city.population} */}
     </li>
 )
 
