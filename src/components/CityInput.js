@@ -18,6 +18,10 @@ handleChange = (event) => {
 handleSubmit = (event) => {
     event.preventDefault()
     this.props.addCity(this.state)
+    this.setState({
+        name: '', 
+        population: ''
+    })
 }
 
     render () {
