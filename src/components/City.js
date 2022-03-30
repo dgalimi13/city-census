@@ -1,14 +1,14 @@
-import React from 'core-js/library/fn/reflect/es7/metadata'
-import City from './City'
+import React from 'react'
+
 
 const City = (props) => {
 
-
+console.log(props)
     return (
 
-    <div>
-        
-    </div>
+    <li>
+        {props.city.name} - {props.city.population}
+    </li>
 )
 
 
