@@ -1,13 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
-//import {Route, Routes, useParams} from 'react-router-dom'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import {Route, Routes} from 'react-router-dom'
 import {fetchCities} from "../actions/fetchCities"
 import Cities from '../components/Cities'
-import City from '../components/City'
 import CityInput from '../components/CityInput'
 import cityReducer from '../reducers/cityReducer'
+import City from '../components/City'
 
 
 class CitiesContainer extends React.Component {
@@ -20,13 +18,10 @@ class CitiesContainer extends React.Component {
         return (
             <div>
                 
-                <Switch>
-                <Route path='/cities/new' component={CityInput}/>
                 
-                <Route path='/cities/:id' render={(routerProps) => <City {...routerProps} cities={this.props.cities}/>}/>
-                
-                <Route exact path='/cities' component={<Cities cities={this.props.cities}/>}/>
-                </Switch>
+                 <Route exact path='/cities/new' component={CityInput}/>
+                 <Route exact path='/cities/:id' render={(routerProps) => <City {...routerProps} cities={this.props.cities}/>}/>
+                 <Route exact path='/cities' render={(routerProps) => <Cities {...routerProps} cities={this.props.cities}/>}/>
                 
                 
 
@@ -43,3 +38,4 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {fetchCities})(CitiesContainer)
+
