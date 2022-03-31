@@ -14,7 +14,7 @@ const City = (props) => {
             <h2>
                 {city ? city.name : null} - {city ? city.population : null}
             </h2>
-            <PopulationsContainer/>
+            <PopulationsContainer account={account}/>
         </div>
     
     )
