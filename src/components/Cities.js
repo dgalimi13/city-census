@@ -8,7 +8,9 @@ const Cities = (props) => {
     return (
         <div>
             {props.cities.map(city => 
-            <div key={city.id}><City city={city}/></div> )}
+                <div key={city.id}>
+                    <Link path={`/accounts/${city.id}`}>{city.name}</Link>
+                </div> )}
         </div>
 
     )
