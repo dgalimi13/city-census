@@ -1,6 +1,6 @@
 import React from 'react'
 // import {Redirect} from 'react-router-dom'
-
+import PopulationsContainer from '../containers/PopulationsContainer'
 
 const City = (props) => {
 
@@ -10,10 +10,13 @@ const City = (props) => {
     console.log(city)
 
     return (
-    <h2>
-        {/* {city ? null : <Redirect to='/cities'/>} */}
-        {city ? city.name : null} - {city ? city.population : null}
-    </h2>
+        <div>
+            <h2>
+                {city ? city.name : null} - {city ? city.population : null}
+            </h2>
+            <PopulationsContainer/>
+        </div>
+    
     )
 
 }
