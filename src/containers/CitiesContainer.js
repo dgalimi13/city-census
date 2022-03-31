@@ -19,8 +19,8 @@ class CitiesContainer extends React.Component {
             <div>
                 
                 
-                 <Route exact path='/cities/new' component={CityInput}/>
-                 <Route exact path='/cities/:id' render={(routerProps) => <City {...routerProps} cities={this.props.cities}/>}/>
+                 <Route path='/cities/new' component={CityInput}/>
+                 <Route path='/cities/:id' render={(routerProps) => <City {...routerProps} cities={this.props.cities}/>}/>
                  <Route exact path='/cities' render={(routerProps) => <Cities {...routerProps} cities={this.props.cities}/>}/>
                 
                 

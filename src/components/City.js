@@ -6,11 +6,10 @@ const City = (props) => {
     console.log(props)
 
     let city = props.cities[props.match.params.id -1]
+    console.log(city)
 
     return (
-
     <li>
-        city
         {city ? city.name : null} - {city ? city.population : null}
     </li>
     )
