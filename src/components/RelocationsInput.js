@@ -1,16 +1,16 @@
 import React from 'react'
 
 
-class PopulationInput extends React.Component {
+class RelocationsInput extends React.Component {
 
     render() {
         return (
             <div>
-                PopulationsInput
+                RelocationsInput
             </div>
         )
     }
 
 }
 
-export default PopulationInput
+export default RelocationsInput
