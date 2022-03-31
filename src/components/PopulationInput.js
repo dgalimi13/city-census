@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class PopulationsInput extends React.Component {
+class PopulationInput extends React.Component {
 
     render() {
         return (
