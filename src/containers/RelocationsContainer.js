@@ -8,7 +8,7 @@ render () {
     return (
         <div>
             <RelocationsInput/>
-            <Relocations relocations={this.props.city.relocations}/>
+            <Relocations relocations={this.props.city && this.props.city.relocations}/>
         </div>
     )
 }
