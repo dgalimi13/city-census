@@ -10,10 +10,10 @@ const City = (props) => {
     console.log(city)
 
     return (
-    <li>
+    <h2>
         {/* {city ? null : <Redirect to='/cities'/>} */}
         {city ? city.name : null} - {city ? city.population : null}
-    </li>
+    </h2>
     )
 
 }
