@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Route, Routes} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {fetchCities} from "../actions/fetchCities"
 import Cities from '../components/Cities'
 import CityInput from '../components/CityInput'
@@ -18,11 +18,11 @@ class CitiesContainer extends React.Component {
         return (
             <div>
                 
-                
+                <Switch>
                  <Route path='/cities/new' component={CityInput}/>
                  <Route path='/cities/:id' render={(routerProps) => <City {...routerProps} cities={this.props.cities}/>}/>
                  <Route exact path='/cities' render={(routerProps) => <Cities {...routerProps} cities={this.props.cities}/>}/>
-                
+                </Switch>
                 
 
                 
