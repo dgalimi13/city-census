@@ -25,8 +25,12 @@ class Api::V1::RelocationsController < ApplicationController
         def destroy
             @relocation = Relocation.find(params[:id])
             @city = City.find(@relocation.city_id)
-            @relocation.destroy
-            render json: @city
+            if @city.update_population_on_delete(@relocation)
+                @relocation.destroy
+                render json: @city
+            else
+                render json: {error: 'Population cannot be less than 0'}
+            end
         end 
     
         private
