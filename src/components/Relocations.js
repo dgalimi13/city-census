@@ -4,7 +4,9 @@ const Relocations = (props) => {
 
     return (
         <div>
-            Relocations
+            {props.relocations && props.relocations.map(relocation => 
+                <li key={relocation.id}>{relocation.kind} - {relocation.amount} - {relocation.date}</li>
+                )}
         </div>
     )
 
