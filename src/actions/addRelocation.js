@@ -7,13 +7,13 @@ export const addRelocation = (relocation, cityId) => {
                 'Content-type': 'application/json'
             },
             body: JSON.stringify(relocation)
-            })
-            .then(response => response.json())
-            .then(account => {
+        })
+        .then(response => response.json())
+        .then(account => {
                 if (account.error) {                        
                     alert(account.error)
-            }   else {
-                dispatch({type: 'ADD_RELOCATION', payload: account})
+                }   else {
+                    dispatch({type: 'ADD_RELOCATION', payload: account})
                 }
             }
         )
