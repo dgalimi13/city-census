@@ -17,7 +17,11 @@ class RelocationsInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        // addRelocation(this.state, this.props.id)
+        this.props.addRelocation(this.state, this.props.city.id)
+        this.setState({
+            kind: 'arrival',
+            amount: ''
+        })
     }
 
     render() {
