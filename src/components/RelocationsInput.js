@@ -4,12 +4,14 @@ import {connect} from 'react-redux'
 class RelocationsInput extends React.Component {
 
     state = {
-        kind: '',
+        kind: 'arrival',
         amount: ''
     }
 
-    handleChange = () => {
-
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
     render() {
@@ -22,7 +24,8 @@ class RelocationsInput extends React.Component {
                         <option>arrival</option>
                     </select>
                     <label>Relocation amount</label>
-                    <input type="text" name="amount" value={this.state.amount}/>
+                    <input type="text" name="amount" value={this.state.amount} onChange={this.handleChange}></input>
+                    <input type="submit"/>
                 </form>
             </div>
         )
