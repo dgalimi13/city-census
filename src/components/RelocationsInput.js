@@ -7,7 +7,13 @@ class RelocationsInput extends React.Component {
     render() {
         return (
             <div>
-                RelocationsInput
+                <form>
+                    <label>Relocation Type:</label>
+                    <select>
+                        <option>departure</option>
+                        <option>arrival</option>
+                    </select>
+                </form>
             </div>
         )
     }
