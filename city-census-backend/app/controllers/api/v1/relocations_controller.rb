@@ -3,8 +3,13 @@ class Api::V1::RelocationsController < ApplicationController
     before_action :set_city
 
         def index 
-            @relocations = @city.relocations
+            @relocations = Relocation.all
             render json: @relocations
+        end 
+
+        def show
+            @relocation = Relocation.find(params[:id])
+            render json: @relocation
         end 
     
         def create
@@ -15,11 +20,6 @@ class Api::V1::RelocationsController < ApplicationController
             else 
                 render json: {error: 'Population cannot be less than 0'}
             end 
-        end 
-    
-        def show
-            @relocation = Relocation.find(params[:id])
-            render json: @relocation
         end 
     
         def destroy
@@ -33,7 +33,7 @@ class Api::V1::RelocationsController < ApplicationController
             @city = City.find(params[:city_id])
         end 
     
-        def relocation_params(params)
+        def relocation_params
             params.require(:relocation).permit(:amount, :city_id, :kind, :date, :reason)
         end 
 
