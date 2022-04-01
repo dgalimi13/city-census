@@ -24,7 +24,9 @@ class Api::V1::RelocationsController < ApplicationController
     
         def destroy
             @relocation = Relocation.find(params[:id])
+            @city = City.find(@relocation.city_id)
             @relocation.destroy
+            render json: @city
         end 
     
         private
