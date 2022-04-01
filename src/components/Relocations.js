@@ -1,11 +1,13 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {deleteRelocation} from '../actions/deleteRelocation'
 
 const Relocations = (props) => {
 
     console.log(props.relocations)
 
     const handleDelete = () => {
-        
+
     }
 
     return (
@@ -18,4 +20,4 @@ const Relocations = (props) => {
 
 }
 
-export default Relocations
+export default connect(null,{deleteRelocation})(Relocations)
