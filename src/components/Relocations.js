@@ -4,6 +4,10 @@ const Relocations = (props) => {
 
     console.log(props.relocations)
 
+    const handleDelete = () => {
+        
+    }
+
     return (
         <div>
             {props.relocations && props.relocations.map(relocation => 
