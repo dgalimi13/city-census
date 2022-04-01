@@ -7,7 +7,7 @@ class RelocationsContainer extends React.Component {
 render () {
     return (
         <div>
-            <RelocationsInput/>
+            <RelocationsInput account={this.props.city}/>
             <Relocations relocations={this.props.city && this.props.city.relocations}/>
         </div>
     )
