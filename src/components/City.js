@@ -6,7 +6,8 @@ const City = (props) => {
 
     
 
-    let city = props.cities[props.match.params.id -1]
+    // let city = props.cities[props.match.params.id -1]
+    let city = props.cities.filter(city => city.id == props.match.params.id)[0]
     console.log(city)
 
     return (
