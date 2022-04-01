@@ -1,5 +1,5 @@
 import React from 'react'
-import RelocationsInput from '../components/RelocationsInput'
+import RelocationInput from '../components/RelocationInput'
 import Relocations from '../components/Relocations'
 
 class RelocationsContainer extends React.Component {
@@ -7,7 +7,7 @@ class RelocationsContainer extends React.Component {
 render () {
     return (
         <div>
-            <RelocationsInput account={this.props.city}/>
+            <RelocationInput account={this.props.city}/>
             <Relocations relocations={this.props.city && this.props.city.relocations}/>
         </div>
     )

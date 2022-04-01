@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addRelocation} from '../actions/addRelocation'
 
-class RelocationsInput extends React.Component {
+class RelocationInput extends React.Component {
 
     state = {
         kind: 'arrival',
@@ -43,4 +43,4 @@ class RelocationsInput extends React.Component {
 
 }
 
-export default connect(null, {addRelocation})(RelocationsInput)
+export default connect(null, {addRelocation})(RelocationInput)
