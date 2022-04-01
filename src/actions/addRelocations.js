@@ -9,6 +9,6 @@ export const addRelocation = (relocation, cityId) => {
             body: JSON.stringify(relocation)
             })
             .then(response => response.json())
-            .then(city => dispatch({type: 'ADD_RELOCATION', payload: city}))
+            .then(relocation => dispatch({type: 'ADD_RELOCATION', payload: relocation}))
     }
 }

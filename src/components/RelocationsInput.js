@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {addRelocation} from '../actions/addRelocation'
 
 class RelocationsInput extends React.Component {
 
@@ -38,4 +39,4 @@ class RelocationsInput extends React.Component {
 
 }
 
-export default connect(null)(RelocationsInput)
+export default connect(null, {addRelocation})(RelocationsInput)
