@@ -5,7 +5,7 @@ export default function cityReducer(state = {cities: []}, action) {
             return {cities: action.payload}
         case 'ADD_CITY':
             return {...state, cities: [...state.cities, action.payload]}
-        case 'ADD_CITY':
+        case 'ADD_RELOCATION':
             let cities = state.cities.map(city => {
                 if (city.id === action.payload.id) {
                     return action.payload

@@ -2,6 +2,8 @@ import React from 'react'
 
 const Relocations = (props) => {
 
+    console.log(props.relocations)
+
     return (
         <div>
             {props.relocations && props.relocations.map(relocation => 

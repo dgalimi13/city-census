@@ -27,7 +27,7 @@ class RelocationInput extends React.Component {
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Relocation Type:</label>
                     <select name="kind" value={this.state.kind} onChange={this.handleChange}>
                         <option>departure</option>
