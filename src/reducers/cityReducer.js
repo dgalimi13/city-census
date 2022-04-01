@@ -13,7 +13,16 @@ export default function cityReducer(state = {cities: []}, action) {
                     return city
                 }
             })
-            return {...state, cities: cities}    
+            return {...state, cities: cities}  
+        case 'DELETE_RELOCATION':
+            let cities = state.cities.map(city => {
+                if (city.id === action.payload.id) {
+                    return action.payload
+                }   else {
+                    return city
+                }
+            })
+            return {...state, cities: cities}
         default:
             return state
     }
