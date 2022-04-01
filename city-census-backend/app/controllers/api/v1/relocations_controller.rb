@@ -23,9 +23,8 @@ class Api::V1::RelocationsController < ApplicationController
         end 
     
         def destroy
-            binding.pry
-            # @relocation = Relocation.find(params[:id])
-            # @relocation.destroy
+            @relocation = Relocation.find(params[:id])
+            @relocation.destroy
         end 
     
         private
