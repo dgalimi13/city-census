@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 
 class RelocationsInput extends React.Component {
@@ -13,4 +14,4 @@ class RelocationsInput extends React.Component {
 
 }
 
-export default RelocationsInput
+export default connect(null)(RelocationsInput)
