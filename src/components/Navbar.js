@@ -6,8 +6,8 @@ const NavBar = (props) => {
     return (
       
         <div>
-            <Link to='/cities' style={{paddingRight: '10px'}}>Cities  </Link>
-            <Link to='/cities/new'> City</Link>
+            <Link to='/cities' style={{paddingRight: '10px'}}>All Cities  </Link>
+            <Link to='/cities/new'> Add City</Link>
         </div>
   
     )
