@@ -22,11 +22,12 @@ handleSubmit = (event) => {
         name: '', 
         population: ''
     })
+    
 }
 
     render () {
         return (
-            <div>
+            <div className="CityForm">
                 <form onSubmit={this.handleSubmit}>
                     <label>City Name: </label>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>

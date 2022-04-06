@@ -7,6 +7,7 @@ import CityInput from '../components/CityInput'
 import cityReducer from '../reducers/cityReducer'
 import City from '../components/City'
 import NavBar from '../components/NavBar'
+import AppTitle from '../components/AppTitle'
 
 
 class CitiesContainer extends React.Component {
@@ -18,7 +19,9 @@ class CitiesContainer extends React.Component {
     render () {
         return (
             <div>
+                <AppTitle/><br></br>
                 <NavBar/>
+                <br></br>
                 <Switch>
                  <Route path='/cities/new' component={CityInput}/>
                  <Route path='/cities/:id' render={(routerProps) => <City {...routerProps} cities={this.props.cities}/>}/>

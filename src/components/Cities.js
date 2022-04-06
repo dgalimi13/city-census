@@ -6,7 +6,7 @@ import City from './City'
 const Cities = (props) => {
 
     return (
-        <div>
+        <div className="CityList">
             {props.cities.map(city => 
                 <li key={city.id}>
                     <Link to={`/cities/${city.id}`}>{city.name}</Link>

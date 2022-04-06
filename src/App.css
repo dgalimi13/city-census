@@ -1,0 +1,24 @@
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 400%;
+    font-family:serif;
+    color: red;
+  }
+
+  .Nav {
+    font-size: 200%;
+    border-style: double;
+  }
+
+  .CityList {
+    border-style: inset  
+  }
+
+  .ShowCity {
+    border-style: groove 
+  }
+
+  .CityForm {
+    border-style: outset
+  }
